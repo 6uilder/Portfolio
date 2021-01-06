@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<title> Business card </title>
+
+	<script src='https://unpkg.com/react@16/umd/react.development.js'></script>
+	<script src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js'></script>
+
+	<style type="text/css">
+		.app {
+			display: grid;
+			margin-left: auto;
+			margin-right: auto;
+			height: 900px;
+			width: 1100px;
+			text-align: left;
+			padding: 15px;
+			border: 5px solid indigo;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: repeat(10, 1fr);
+			grid-template-areas:
+				't p'
+				't p'
+				's p'
+				's p'
+				's c'
+				'e c'
+				'e c'
+				'w c'
+				'w a'
+				'w a';
+		}
+
+		.top {
+			grid-area: t;
+			background-color: red;
+			text-align: center
+		}
+
+		.skills {
+			grid-area: s;
+			background-color: rgb(188, 134, 209);
+		}
+
+		.education {
+			grid-area: e;
+			background-color: yellow;
+		}
+
+		.work {
+			grid-area: w;
+			background-color: green;
+		}
+
+		.person {
+			grid-area: p;
+			background-color: blue;
+			text-align: center
+		}
+
+		.common {
+			grid-area: c;
+			background-color: brown;
+		}
+
+		.about {
+			grid-area: a;
+			background-color: darkmagenta;
+		}
+	</style>
+</head>
+
+<body>
+	<div id='root'></div>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+
+
+	<script type='text/babel'>
+
+
+		function Top() {
+			return (
+				<div className='top'>
+					<div>Михайлов Сергей Вячеславович</div>
+					<div>Желаемая должность: junior front-end разработчик(React)</div>
+
+				</div>
+			)
+		}
+
+		function Skills() {
+			return (
+				<div className='skills'>
+					Навыки
+				</div>
+			)
+		}
+
+		function Education() {
+			return (
+				<div className='education'>
+					Образование
+				</div>
+			)
+		}
+
+		function Work() {
+			return (
+				<div className='work'>
+					Опыт работы
+				</div>
+			)
+		}
+
+		function Person() {
+			return (
+				<div className='person'>
+					ФОТО+контакты
+				</div>
+			)
+		}
+
+		function Common() {
+			return (
+				<div className='common'>
+					Общая информация
+				</div>)
+		}
+
+		function About() {
+			return (
+				<div className='about'>
+					О себе
+				</div>
+			)
+		}
+
+
+
+		function App() {
+			return (
+				<div className='app'>
+					<Top />
+					<Skills />
+					<Education />
+					<Work />
+					<Person />
+					<Common />
+					<About />
+				</div>
+			)
+		}
+
+
+		ReactDOM.render(<App />, document.getElementById('root'));
+	</script>
+
+
+</body>
+
+</html>
