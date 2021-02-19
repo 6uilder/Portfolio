@@ -1,0 +1,64 @@
+.container {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  height: 900px;
+  width: 1100px;
+  text-align: left;
+  padding: 15px;
+  border: 5px solid indigo;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-areas:
+    't p'
+    't p'
+    's p'
+    's p'
+    's c'
+    'e c'
+    'e c'
+    'w c'
+    'w a'
+    'w a';
+}
+
+.top {
+  grid-area: t;
+  background-color: red;
+  text-align: center
+}
+
+.skills {
+  grid-area: s;
+  background-color: rgb(188, 134, 209);
+}
+
+.education {
+  grid-area: e;
+  background-color: yellow;
+}
+
+.work {
+  grid-area: w;
+  background-color: green;
+}
+
+.person {
+  grid-area: p;
+  background-color: blue;
+  text-align: center
+}
+
+.myPhoto {
+  width: 100px;
+}
+
+.common {
+  grid-area: c;
+  background-color: brown;
+}
+
+.about {
+  grid-area: a;
+  background-color: darkmagenta;
+}
